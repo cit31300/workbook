@@ -1,0 +1,30 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+  - caption: Creating a Development Environment
+    chapters:
+    - file: dev_environment/windows/index
+      sections:
+      - file: dev_environment/windows/1_wsl
+      - file: dev_environment/windows/2_ubuntu
+      - file: dev_environment/windows/3_node_npm
+      - file: dev_environment/windows/4_git
+      - file: dev_environment/windows/5_github
+      - file: dev_environment/windows/6_connect_github
+      - file: dev_environment/windows/7_vscode
+      - file: dev_environment/windows/8_connect_vscode
+      - file: dev_environment/windows/9_use_ubuntu_in_vscode
+      - file: dev_environment/windows/10_congrats
+    - file: dev_environment/mac/index
+      sections:
+      - file: dev_environment/mac/1_node_npm
+      - file: dev_environment/mac/2_homebrew
+      - file: dev_environment/mac/3_git
+      - file: dev_environment/mac/4_github
+      - file: dev_environment/mac/5_connect_github
+      - file: dev_environment/mac/6_vscode
+      - file: dev_environment/mac/7_use_terminal_in_vscode
+      - file: dev_environment/mac/8_congrats
