@@ -20,8 +20,8 @@ parts:
       - file: dev_environment/windows/10_congrats
     - file: dev_environment/mac/index
       sections:
-      - file: dev_environment/mac/1_node_npm
-      - file: dev_environment/mac/2_homebrew
+      - file: dev_environment/mac/1_homebrew
+      - file: dev_environment/mac/2_node_npm
       - file: dev_environment/mac/3_git
       - file: dev_environment/mac/4_github
       - file: dev_environment/mac/5_connect_github

@@ -42,7 +42,7 @@ If you chose a filename other than the default when you created the key, use the
 
 You will add the public key file for your SSH key to your GitHub.com account. This will allow your computer to authenticate with GitHub.com when you interact with a remote repository.
 
-1. In the Ubuntu command prompt, use the following command to copy the contents of your public key to the clipboard:
+1. In the Ubuntu command prompt, use the following command to display the contents of your public key on the screen:
 
 ```
 cat ~/.ssh/id_ed25519.pub

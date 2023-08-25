@@ -14,31 +14,12 @@ You will use `nvm` (the Node Version Manager) to install the `Node.js` JavaScrip
 The names are similar but they provide very different functionality, so really think about what the acronyms mean!
 `````
 
-(devenv:mac:uninstall_outdated)=
-## Uninstall Outdated Files
-Node.js is sometimes automatically included with the Linux distribution in MacOS. Unfortunately, the version that is installed is outdated. Therefore, the first thing we have to do is uninstall the old version.
-
-This is done in two steps: `purge`, which uninstalls Node.js, and `auto-remove` which removes any leftover files that no other software needs (now that Node.js has been uninstalled).
-
-1. Run the following command in a MacOS Terminal window:
-
-```
-sudo apt-get purge --auto-remove nodejs
-```
-
-(devenv:mac:install_support)=
-## Install Support Software
-To install software from the internet, MacOS needs to be able to resolve web addresses (URLs). It can do that with a tool called `cURL`. 
-
-1. Install `cURL` by typing this into the MacOS Terminal window:
-
-```
-sudo apt-get install curl
-```
+(devenv:mac:install_nvm)=
+## Install nvm
 
 There are several different versions of Node.js, so they have developed software to help you obtain and switch between versions (which is helpful if you are working on multiple projects). That software is called `nvm` (Node.js Version Manager). 
 
-2. Install `nvm`
+1. Install `nvm`
 
 *(Copy and paste this ENTIRE line - it is word-wrapping in the documentation, but it is a single command.)*
 
@@ -50,16 +31,22 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.4/install.sh | bash
 You must restart your **MacOS shell** (not your entire computer) after installing `nvm`! 
 ```
 
-3. To restart the shell, enter the following at the MacOS Terminal window:
+2. To restart the shell, enter the following at the MacOS Terminal window:
 
 ```
 source ~/.zshrc
 ```
 
+```{note}
+On some systems the file that holds your shell configuration is named `.zprofile` instead of `.zshrc`.
+
+If the command above did not work, try `source ~/.zprofile`
+```
+
 (You can also just quit and restart the Terminal.)
 
-(devenv:mac:verify_installation)=
-## Verify Installation
+(devenv:mac:verify_nvm_installation)=
+## Verify nvm Installation
 
 1. After restarting your MacOS shell, ensure that `nvm` was installed by entering the command:
 

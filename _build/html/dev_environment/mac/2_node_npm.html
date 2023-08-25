@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Your MacOS Development Environment &#8212; CIT 31300 Workbook</title>
+    <title>Install nvm, Node.js, and npm &#8212; CIT 31300 Workbook</title>
   
   
   
@@ -61,11 +61,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'dev_environment/mac/index';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'dev_environment/mac/2_node_npm';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Install Homebrew" href="1_homebrew.html" />
-    <link rel="prev" title="Congratulations!" href="../windows/10_congrats.html" />
+    <link rel="next" title="Install Git on MacOS" href="3_git.html" />
+    <link rel="prev" title="Install Homebrew" href="1_homebrew.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -171,9 +171,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../windows/10_congrats.html">Congratulations!</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Your MacOS Development Environment</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Your MacOS Development Environment</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="1_homebrew.html">Install Homebrew</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2_node_npm.html">Install nvm, Node.js, and npm</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Install nvm, Node.js, and npm</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3_git.html">Install Git on MacOS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4_github.html">Create a GitHub.com Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="5_connect_github.html">Connect Your GitHub.com Account</a></li>
@@ -253,7 +253,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/cit31300/workbook/issues/new?title=Issue%20on%20page%20%2Fdev_environment/mac/index.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/cit31300/workbook/issues/new?title=Issue%20on%20page%20%2Fdev_environment/mac/2_node_npm.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -283,7 +283,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/dev_environment/mac/index.md" target="_blank"
+      <li><a href="../../_sources/dev_environment/mac/2_node_npm.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -352,7 +352,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -363,11 +365,22 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Your MacOS Development Environment</h1>
+    <h1>Install nvm, Node.js, and npm</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-nvm">Install nvm</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#verify-nvm-installation">Verify nvm Installation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-node-js">Install Node.js</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#verify-node-js-version">Verify Node.js Version</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -377,12 +390,74 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="your-macos-development-environment">
-<h1>Your MacOS Development Environment<a class="headerlink" href="#your-macos-development-environment" title="Permalink to this heading">#</a></h1>
-<p>You will work on your local computer to develop the web applications we will build this semester.</p>
-<p>The work we will perform in this class assumes that your application will be hosted on a Linux-based server. MacOS is based on Linux, so you can natively install all of the software that you’ll need to develop the applications in this course.</p>
-<div class="toctree-wrapper compound">
+  <section class="tex2jax_ignore mathjax_ignore" id="install-nvm-node-js-and-npm">
+<h1>Install nvm, Node.js, and npm<a class="headerlink" href="#install-nvm-node-js-and-npm" title="Permalink to this heading">#</a></h1>
+<p>Node.js has many different versions available and developers working on multiple projects often need to change which version they are using so that they are working in the same environment as the application they’ve built. It’s possible to install multiple versions of Node.js on a single machine, but it can be confusing to manage the different versions.</p>
+<p>You will use <code class="docutils literal notranslate"><span class="pre">nvm</span></code> (the Node Version Manager) to install the <code class="docutils literal notranslate"><span class="pre">Node.js</span></code> JavaScript runtime and <code class="docutils literal notranslate"><span class="pre">npm</span></code> (the Node Package Manager).</p>
+<div class="tip admonition">
+<p class="admonition-title">Pro Tip!</p>
+<p><code class="docutils literal notranslate"><span class="pre">nvm</span></code> helps you manage which version(s) of the Node.js runtime you have installed on your OS.</p>
+<p><code class="docutils literal notranslate"><span class="pre">npm</span></code> manages the additional packages that you will install to support your application development.</p>
+<p>The names are similar but they provide very different functionality, so really think about what the acronyms mean!</p>
 </div>
+<section id="install-nvm">
+<span id="devenv-mac-install-nvm"></span><h2>Install nvm<a class="headerlink" href="#install-nvm" title="Permalink to this heading">#</a></h2>
+<p>There are several different versions of Node.js, so they have developed software to help you obtain and switch between versions (which is helpful if you are working on multiple projects). That software is called <code class="docutils literal notranslate"><span class="pre">nvm</span></code> (Node.js Version Manager).</p>
+<ol class="arabic simple">
+<li><p>Install <code class="docutils literal notranslate"><span class="pre">nvm</span></code></p></li>
+</ol>
+<p><em>(Copy and paste this ENTIRE line - it is word-wrapping in the documentation, but it is a single command.)</em></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="o">-</span><span class="n">o</span><span class="o">-</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">raw</span><span class="o">.</span><span class="n">githubusercontent</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">nvm</span><span class="o">-</span><span class="n">sh</span><span class="o">/</span><span class="n">nvm</span><span class="o">/</span><span class="n">v0</span><span class="mf">.39.4</span><span class="o">/</span><span class="n">install</span><span class="o">.</span><span class="n">sh</span> <span class="o">|</span> <span class="n">bash</span>
+</pre></div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>You must restart your <strong>MacOS shell</strong> (not your entire computer) after installing <code class="docutils literal notranslate"><span class="pre">nvm</span></code>!</p>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>To restart the shell, enter the following at the MacOS Terminal window:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="o">~/.</span><span class="n">zshrc</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>On some systems the file that holds your shell configuration is named <code class="docutils literal notranslate"><span class="pre">.zprofile</span></code> instead of <code class="docutils literal notranslate"><span class="pre">.zshrc</span></code>.</p>
+<p>If the command above did not work, try <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">~/.zprofile</span></code></p>
+</div>
+<p>(You can also just quit and restart the Terminal.)</p>
+</section>
+<section id="verify-nvm-installation">
+<span id="devenv-mac-verify-nvm-installation"></span><h2>Verify nvm Installation<a class="headerlink" href="#verify-nvm-installation" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>After restarting your MacOS shell, ensure that <code class="docutils literal notranslate"><span class="pre">nvm</span></code> was installed by entering the command:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nvm</span> <span class="o">-</span><span class="n">v</span>
+</pre></div>
+</div>
+<p>This should return the message <em>“0.39.4”</em> or a higher number.</p>
+</section>
+<section id="install-node-js">
+<span id="devenv-mac-install-node"></span><h2>Install Node.js<a class="headerlink" href="#install-node-js" title="Permalink to this heading">#</a></h2>
+<p>You will now use <code class="docutils literal notranslate"><span class="pre">nvm</span></code> to install the current stable LTS (“long term support”) release of Node.js.</p>
+<ol class="arabic simple">
+<li><p>Install Node.js with the following command:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nvm</span> <span class="n">install</span> <span class="o">--</span><span class="n">lts</span>
+</pre></div>
+</div>
+</section>
+<section id="verify-node-js-version">
+<span id="devenv-mac-verify-node"></span><h2>Verify Node.js Version<a class="headerlink" href="#verify-node-js-version" title="Permalink to this heading">#</a></h2>
+<p>Verify the version of Node.js that was installed.</p>
+<ol class="arabic simple">
+<li><p>Run the following command:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">node</span> <span class="o">--</span><span class="n">version</span>
+</pre></div>
+</div>
+<p>You should receive a message that “v18.17.1” (or a higher number) is installed.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -417,20 +492,20 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../windows/10_congrats.html"
+       href="1_homebrew.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Congratulations!</p>
+        <p class="prev-next-title">Install Homebrew</p>
       </div>
     </a>
     <a class="right-next"
-       href="1_homebrew.html"
+       href="3_git.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Install Homebrew</p>
+        <p class="prev-next-title">Install Git on MacOS</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -443,6 +518,23 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-nvm">Install nvm</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#verify-nvm-installation">Verify nvm Installation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-node-js">Install Node.js</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#verify-node-js-version">Verify Node.js Version</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
