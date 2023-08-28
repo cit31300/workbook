@@ -28,3 +28,21 @@ parts:
       - file: dev_environment/mac/6_vscode
       - file: dev_environment/mac/7_use_terminal_in_vscode
       - file: dev_environment/mac/8_congrats
+  - caption: Creating a Node.js Web Server (3 Ways)
+    chapters:
+    - file: web_server/node/index
+      sections:
+      - file: web_server/node/1_vscode
+      - file: web_server/node/2_create_node
+      - file: web_server/node/3_add_contents
+      - file: web_server/node/4_make_request
+      - file: web_server/node/5_update_response
+      - file: web_server/node/6_restart
+    - file: web_server/express/index
+      sections:
+      - file: web_server/express/1_vscode
+      - file: web_server/express/2_create_node
+      - file: web_server/express/3_add_contents
+      - file: web_server/express/4_make_request
+      - file: web_server/express/5_update_response
+      - file: web_server/express/6_restart
