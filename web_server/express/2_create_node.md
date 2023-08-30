@@ -1,7 +1,17 @@
 # Create a Node.js File with Express
 You will now create a new file from the Linux command prompt and open it for editing in Visual Studio Code.
 
-1. Ensure that you are in the directory for our `hello-express` project and enter the following into the Terminal:
+1. Install **express* by entering the following command into the Terminal
+
+```
+npm install express --save
+```
+
+```{note}
+Remember! `npm` stands for Node.js Package Manager. This is the utility that helps us install and manage other Node.js tools we will incorporate into our applications.
+```
+
+2. Ensure that you are in the directory for our `hello-express` project and enter the following into the Terminal:
 
 ```
 code app.js -r
