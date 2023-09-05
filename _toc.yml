@@ -46,3 +46,17 @@ parts:
       - file: web_server/express/4_make_request
       - file: web_server/express/5_update_response
       - file: web_server/express/6_restart
+    - file: web_server/express_generator/index
+      sections:
+      - file: web_server/express_generator/1_install
+      - file: web_server/express_generator/2_create_express
+      - file: web_server/express_generator/3_add_additional_files
+      - file: web_server/express_generator/4_install_nodemon
+  - caption: Git & GitHub
+    chapters:
+    - file: git_github/index
+      sections:
+      - file: git_github/1_git_init.md
+      - file: git_github/2_github_remote.md
+      - file: git_github/3_add_commit_push.md
+    - file: git_github/4_branching.md
